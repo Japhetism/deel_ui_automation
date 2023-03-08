@@ -5,6 +5,16 @@ import LoginPage from "../../pages/login";
 
 describe("Test Konga login ", () => {
 
+    // declare a login data variable
+    let loginData;
+
+    // get access to data using before hook
+    before(function() {
+        cy.fixture("login").then(function(res) {
+            loginData = res;
+        })
+    });
+
     // create an instance of login class
     const loginPage = new LoginPage();
 
@@ -17,10 +27,10 @@ describe("Test Konga login ", () => {
         loginPage.clickLoginSignupBtn();
 
         // enter email address
-        loginPage.setEmail("a@gmail.com");
+        loginPage.setEmail(loginData.email);
 
         // enter password
-        loginPage.setPassword("passwordd");
+        loginPage.setPassword(loginData.password);
 
         // click on login button
         loginPage.clickLoginBtn();
