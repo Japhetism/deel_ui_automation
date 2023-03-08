@@ -1,6 +1,12 @@
 /// <reference types="cypress" />
 
+// import pages
+import LoginPage from "../../pages/login";
+
 describe("Test Konga login ", () => {
+
+    // create an instance of login class
+    const loginPage = new LoginPage();
 
     it("Test valid login credentials", () => {
 
@@ -8,16 +14,16 @@ describe("Test Konga login ", () => {
         cy.visit("https://www.konga.com/");
 
         // click on login/signup button
-        cy.get("._12e27_1r3kc > ._7ad32_SD12Y").click();
+        loginPage.clickLoginSignupBtn();
 
         // enter email address
-        cy.get("#username").type("a@gmail.com");
+        loginPage.setEmail("a@gmail.com");
 
         // enter password
-        cy.get("#password").type("password");
+        loginPage.setPassword("passwordd");
 
         // click on login button
-        cy.get("").click('button[type="submit"]').contains("Login").click();
+        loginPage.clickLoginBtn();
 
     })
 })
