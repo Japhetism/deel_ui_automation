@@ -1,0 +1,124 @@
+[
+  {
+    "description": "    I want to test Orange website Login",
+    "elements": [
+      {
+        "description": "",
+        "id": "orange-website-login;test-orange-website-with-valid-login-credentials",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Test Orange website with valid login credentials",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the home page",
+            "result": {
+              "duration": 3891000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should be redirected to the login screen",
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 9,
+            "name": "I enter username",
+            "result": {
+              "duration": 597000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I expected username field to have a value",
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 11,
+            "name": "I enter password",
+            "result": {
+              "duration": 222000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I expected password field to have a value",
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on login button",
+            "result": {
+              "duration": 2032000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should be redirected to my dashboard",
+            "result": {
+              "duration": 436000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario",
+        "tags": [
+          {
+            "line": 5,
+            "name": "@focus"
+          }
+        ]
+      }
+    ],
+    "id": "orange-website-login",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Orange website Login",
+    "uri": "cypress/e2e/orange/login/login.feature"
+  }
+]
