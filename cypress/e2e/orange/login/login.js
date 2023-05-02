@@ -33,16 +33,32 @@ When("I enter username", () => {
     loginPage.setUsername(loginData.username);
 });
 
+When("I enter invalid username", () => {
+    loginPage.setUsername(loginData.invalidUsername);
+});
+
 Then("I expected username field to have a value", () => {
     loginPage.validateUsername(loginData.username);
+});
+
+Then("I expected username field to have an invalid username value", () => {
+    loginPage.validateUsername(loginData.invalidUsername);
 });
 
 When("I enter password", () => {
     loginPage.setPassword(loginData.password);
 });
 
+When("I enter invalid password", () => {
+    loginPage.setPassword(loginData.invalidPassword);
+});
+
 Then("I expected password field to have a value", () => {
     loginPage.validatePassword(loginData.password);
+});
+
+Then("I expected password field to have an invalid password value", () => {
+    loginPage.validatePassword(loginData.invalidPassword);
 });
 
 When("I click on login button", () => {
@@ -50,5 +66,9 @@ When("I click on login button", () => {
 });
 
 Then("I should be redirected to my dashboard", () => {
-    loginPage.validateUserLogin(loginData.name);
+    loginPage.validateUserLogin();
+});
+
+Then("I should see Invalid credentials error message", () => {
+    loginPage.validateErrorMessage("Invalid credentials")
 });

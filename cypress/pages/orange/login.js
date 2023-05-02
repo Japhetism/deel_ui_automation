@@ -19,6 +19,11 @@ class Login {
         return cy.get('.oxd-userdropdown-name');
     }
 
+    // locate error message
+    getErrorMessage() {
+        return cy.get('.oxd-alert-content-text');
+    }
+
     // set value for username field
     setUsername(username) {
         this.getUsername().type(username);
@@ -45,7 +50,7 @@ class Login {
     }
 
     // confirm user is successfully login by verifying the user name
-    validateUserLogin(expectedName) {
+    validateUserLogin() {
         // this.getUserDropdownName().then( (x) => {
         //     let actualName =  x.text()
         //     expect(actualName).to.equal(expectedName)
@@ -60,6 +65,13 @@ class Login {
         cy.url().should('include', 'orangehrmlive.com')  
             .should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
             .should('contain', 'orangehrmlive')
+    }
+
+    validateErrorMessage(expectedErrorMsg) {
+        this.getErrorMessage().then((x) => {
+            let actualErrorMsg = x.text();
+            expect(actualErrorMsg).to.equal(expectedErrorMsg)
+        })
     }
 }
 

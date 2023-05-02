@@ -6,12 +6,12 @@
         "description": "",
         "id": "orange-website-login;test-orange-website-with-valid-login-credentials",
         "keyword": "Scenario",
-        "line": 6,
+        "line": 5,
         "name": "Test Orange website with valid login credentials",
         "before": [
           {
             "result": {
-              "duration": 14000000,
+              "duration": 11000000,
               "status": "passed"
             },
             "match": {
@@ -22,10 +22,10 @@
         "steps": [
           {
             "keyword": "Given ",
-            "line": 7,
+            "line": 6,
             "name": "I am on the home page",
             "result": {
-              "duration": 4339000000,
+              "duration": 3323000000,
               "status": "passed"
             },
             "match": {
@@ -34,56 +34,8 @@
           },
           {
             "keyword": "Then ",
-            "line": 8,
+            "line": 7,
             "name": "I should be redirected to the login screen",
-            "result": {
-              "duration": 13000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "When ",
-            "line": 9,
-            "name": "I enter username",
-            "result": {
-              "duration": 579000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 10,
-            "name": "I expected username field to have a value",
-            "result": {
-              "duration": 177000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "And ",
-            "line": 11,
-            "name": "I enter password",
-            "result": {
-              "duration": 236000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "not available:0"
-            }
-          },
-          {
-            "keyword": "Then ",
-            "line": 12,
-            "name": "I expected password field to have a value",
             "result": {
               "duration": 11000000,
               "status": "passed"
@@ -94,10 +46,10 @@
           },
           {
             "keyword": "When ",
-            "line": 13,
-            "name": "I click on login button",
+            "line": 8,
+            "name": "I enter username",
             "result": {
-              "duration": 4799000000,
+              "duration": 493000000,
               "status": "passed"
             },
             "match": {
@@ -106,8 +58,8 @@
           },
           {
             "keyword": "Then ",
-            "line": 14,
-            "name": "I should be redirected to my dashboard",
+            "line": 9,
+            "name": "I expected username field to have a value",
             "result": {
               "duration": 7000000,
               "status": "passed"
@@ -115,15 +67,408 @@
             "match": {
               "location": "not available:0"
             }
+          },
+          {
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter password",
+            "result": {
+              "duration": 226000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I expected password field to have a value",
+            "result": {
+              "duration": 189000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on login button",
+            "result": {
+              "duration": 2205000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should be redirected to my dashboard",
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
           }
         ],
-        "type": "scenario",
-        "tags": [
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orange-website-login;test-orange-website-with-invalid-username-login-credentials",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Test Orange website with invalid username login credentials",
+        "before": [
           {
-            "line": 5,
-            "name": "@focus"
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
           }
-        ]
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I am on the home page",
+            "result": {
+              "duration": 597000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should be redirected to the login screen",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 18,
+            "name": "I enter invalid username",
+            "result": {
+              "duration": 676000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I expected username field to have an invalid username value",
+            "result": {
+              "duration": 151000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 20,
+            "name": "I enter password",
+            "result": {
+              "duration": 228000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I expected password field to have a value",
+            "result": {
+              "duration": 149000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 22,
+            "name": "I click on login button",
+            "result": {
+              "duration": 1108000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see Invalid credentials error message",
+            "result": {
+              "duration": 302000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orange-website-login;test-orange-website-with-invalid-password-login-credentials",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Test Orange website with invalid password login credentials",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I am on the home page",
+            "result": {
+              "duration": 508000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should be redirected to the login screen",
+            "result": {
+              "duration": 263000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 28,
+            "name": "I enter username",
+            "result": {
+              "duration": 634000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I expected username field to have a value",
+            "result": {
+              "duration": 86000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 30,
+            "name": "I enter invalid password",
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I expected password field to have an invalid password value",
+            "result": {
+              "duration": 167000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click on login button",
+            "result": {
+              "duration": 1235000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see Invalid credentials error message",
+            "result": {
+              "duration": 755000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orange-website-login;test-orange-website-with-invalid-login-credentials",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Test Orange website with invalid login credentials",
+        "before": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 36,
+            "name": "I am on the home page",
+            "result": {
+              "duration": 526000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should be redirected to the login screen",
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 38,
+            "name": "I enter invalid username",
+            "result": {
+              "duration": 865000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 39,
+            "name": "I expected username field to have an invalid username value",
+            "result": {
+              "duration": 132000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "And ",
+            "line": 40,
+            "name": "I enter invalid password",
+            "result": {
+              "duration": 176000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I expected password field to have an invalid password value",
+            "result": {
+              "duration": 230000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 42,
+            "name": "I click on login button",
+            "result": {
+              "duration": 830000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 43,
+            "name": "I should see Invalid credentials error message",
+            "result": {
+              "duration": 353000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
       }
     ],
     "id": "orange-website-login",
