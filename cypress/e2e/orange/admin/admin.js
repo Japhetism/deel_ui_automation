@@ -29,10 +29,7 @@ Before(() => {
 });
 
 Given("I am on the dashboard page", () => {
-    cy.visit("/");
-    loginPage.setUsername(loginData.username);
-    loginPage.setPassword(loginData.password);
-    loginPage.clickLoginBtn();
+    loginPage.userLogin(loginData.username, loginData.password);
 });
 
 When("I click on admin", () => {

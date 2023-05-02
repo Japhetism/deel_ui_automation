@@ -73,6 +73,13 @@ class Login {
             expect(actualErrorMsg).to.equal(expectedErrorMsg)
         })
     }
+
+    userLogin(username, password) {
+        cy.visit("/");
+        this.setUsername(username);
+        this.setPassword(password)
+        this.clickLoginBtn();
+    }
 }
 
 export default Login;
