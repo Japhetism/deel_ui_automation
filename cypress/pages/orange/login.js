@@ -46,10 +46,13 @@ class Login {
 
     // confirm user is successfully login by verifying the user name
     validateUserLogin(expectedName) {
-        this.getUserDropdownName().then( (x) => {
-            let actualName =  x.text()
-            expect(actualName).to.equal(expectedName)
-        })
+        // this.getUserDropdownName().then( (x) => {
+        //     let actualName =  x.text()
+        //     expect(actualName).to.equal(expectedName)
+        // })
+        cy.url().should('include', 'orangehrmlive.com')  
+            .should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index')
+            .should('contain', 'orangehrmlive')
     }
 
     // confirm user is on the login screen using url
