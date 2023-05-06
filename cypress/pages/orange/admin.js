@@ -7,7 +7,7 @@ class Admin {
 
     // locate admin username search input
     getAdminSearchInput() {
-        return cy.get('.oxd-input--active').last();
+        return cy.get('.oxd-input').last();
     }
 
     // locate select text input

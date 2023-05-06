@@ -41,12 +41,12 @@ Then("I should be redirected to admin page", () => {
 });
 
 When("I enter admin search input", () => {
-    adminPage.setAdminSearchValue("abc123");
+    adminPage.setAdminSearchValue("James007");
 });
 
-// Then("I expected admin search field to have a value", () => {
-//     adminPage.validateAdminSearchValue("abc123");
-// });
+Then("I expected admin search field to have a value", () => {
+    adminPage.validateAdminSearchValue("James007");
+});
 
 When("I select admin as user role", () => {
     adminPage.setAdminUserRole("ESS");
