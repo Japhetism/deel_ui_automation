@@ -48,6 +48,14 @@ When("I enter admin search input", () => {
 //     adminPage.validateAdminSearchValue("abc123");
 // });
 
+When("I select admin as user role", () => {
+    adminPage.setAdminUserRole("ESS");
+});
+
+Then("I expect admin user role field to have a value", () => {
+    adminPage.validateAdminUserRoleValue("ESS");
+});
+
 When("I click on search button", () => {
     adminPage.clickOnSearchBtn();
 });
