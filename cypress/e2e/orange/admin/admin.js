@@ -40,42 +40,42 @@ Then("I should be redirected to admin page", () => {
     adminPage.validateAdminPage();
 });
 
-When("I enter admin search input", () => {
-    adminPage.setAdminSearchValue("James007");
+When("I enter {string} in the username search input", (username) => {
+    adminPage.setAdminSearchValue(username);
 });
 
-Then("I expected admin search field to have a value", () => {
-    adminPage.validateAdminSearchValue("James007");
+Then("I expected to see {string} in the username search input", (username) => {
+    adminPage.validateAdminSearchValue(username);
 });
 
-When("I select admin as user role", () => {
-    adminPage.setAdminUserRole("Admin");
+When("I select {string} as user role", (roleName) => {
+    adminPage.setAdminUserRole(roleName);
 });
 
-Then("I expect admin user role field to have a value", () => {
-    adminPage.validateAdminUserRoleValue("Admin");
+Then("I expect {string} as the user role field value", (roleName) => {
+    adminPage.validateAdminUserRoleValue(roleName);
 });
 
-When("I select an admin status", () => {
-    adminPage.setAdminStatus("Enabled");
+When("I select an admin status as {string}", (status) => {
+    adminPage.setAdminStatus(status);
 });
 
-Then("I expect admin status field to have a value", () => {
-    adminPage.validateAdminStatusValue("Enabled");
+Then("I expect admin status field to have a value of {string}", (status) => {
+    adminPage.validateAdminStatusValue(status);
 });
 
-When("I enter employee hint name to select an employee", () => {
-    adminPage.setEmployeeName("Ali", "Alice Duval");
+When("I enter employee hint name as {string} and select {string} from employee dropdown", (employeeHintName, employeeName) => {
+    adminPage.setEmployeeName(employeeHintName, employeeName);
 });
 
-Then("I expect employee name field to have a value", () => {
-    adminPage.validateEmployeeNameValue("Alice  Duval");
+Then("I expect employee name field to have a value of {string}", (employeeName) => {
+    adminPage.validateEmployeeNameValue(employeeName);
 });
 
 When("I click on search button", () => {
     adminPage.clickOnSearchBtn();
 });
 
-Then("I should see my result", () => {
-    adminPage.validateSearchResult("abc123");
+Then("I should see result with a column as {string}", (searchInput) => {
+    adminPage.validateSearchResult(searchInput);
 });
