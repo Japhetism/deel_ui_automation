@@ -28,3 +28,12 @@ Feature: Orange website Admin
         Then I expect employee name field to have a value
         And I click on search button
         Then I should see my result
+
+    Scenario: Test Orange website admin status search
+        Given I am on the dashboard page
+        When I click on admin
+        Then I should be redirected to admin page
+        When I select an admin status
+        Then I expect admin status field to have a value
+        And I click on search button
+        Then I should see my result

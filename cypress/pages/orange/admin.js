@@ -28,6 +28,14 @@ class Admin {
             .get('.oxd-select-option');
     }
 
+    // locate admin status select button
+    getAdminStatus() {
+        return this.getSelectTextInput().last()
+            .click({force: true})
+            .get('.oxd-select-dropdown')
+            .get('.oxd-select-option');
+    }
+
     // locate employee search input
     getEmployeeSearchInput() {
         return cy.get('input[placeholder="Type for hints..."]');
@@ -58,6 +66,10 @@ class Admin {
         this.getAdminUserRole().contains(role_name).click();
     }
 
+    setAdminStatus(status) {
+        this.getAdminStatus().contains(status).click();
+    }
+
     setEmployeeName(employeeHintName, fullEmployeeName) {
         this.getEmployeeNameSearchInput().type(employeeHintName);
         cy.wait(9000);
@@ -80,6 +92,11 @@ class Admin {
     // confirm admin role value
     validateAdminUserRoleValue(role_name) {
         this.getSelectTextInput().first().should('contain', role_name);
+    }
+
+    // confirm admin status value
+    validateAdminStatusValue(status) {
+        this.getSelectTextInput().last().should('contain', status);
     }
 
     // confirm employee name value

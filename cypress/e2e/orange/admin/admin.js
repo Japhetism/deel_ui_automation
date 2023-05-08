@@ -56,6 +56,14 @@ Then("I expect admin user role field to have a value", () => {
     adminPage.validateAdminUserRoleValue("Admin");
 });
 
+When("I select an admin status", () => {
+    adminPage.setAdminStatus("Enabled");
+});
+
+Then("I expect admin status field to have a value", () => {
+    adminPage.validateAdminStatusValue("Enabled");
+});
+
 When("I enter employee hint name to select an employee", () => {
     adminPage.setEmployeeName("Ali", "Alice Duval");
 });
