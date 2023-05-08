@@ -19,3 +19,12 @@ Feature: Orange website Admin
         Then I expect admin user role field to have a value
         And I click on search button
         Then I should see my result
+
+    Scenario: Test Orange website admin employee name search
+        Given I am on the dashboard page
+        When I click on admin
+        Then I should be redirected to admin page
+        When I enter employee hint name to select an employee
+        Then I expect employee name field to have a value
+        And I click on search button
+        Then I should see my result

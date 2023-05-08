@@ -15,12 +15,28 @@ class Admin {
         return cy.get('.oxd-select-text');
     }
 
+    // locate employee name search input
+    getEmployeeNameSearchInput() {
+        return cy.get('input[placeholder="Type for hints..."]');
+    }
+
     // locate admin user role select button
     getAdminUserRole() {
         return this.getSelectTextInput().first()
             .click({force: true})
             .get('.oxd-select-dropdown')
             .get('.oxd-select-option');
+    }
+
+    // locate employee search input
+    getEmployeeSearchInput() {
+        return cy.get('input[placeholder="Type for hints..."]');
+    }
+
+    // locate employee dropdown and select an employee
+    getEmployee() {
+        return cy.get(".oxd-autocomplete-dropdown")
+        .get(".oxd-autocomplete-option");
     }
 
     // locate search button
@@ -42,6 +58,12 @@ class Admin {
         this.getAdminUserRole().contains(role_name).click();
     }
 
+    setEmployeeName(employeeHintName, fullEmployeeName) {
+        this.getEmployeeNameSearchInput().type(employeeHintName);
+        cy.wait(9000);
+        this.getEmployee().contains(fullEmployeeName).click();
+    }
+
     clickOnAdminMenu() {
         this.getAdminMenu().click();
     }
@@ -55,8 +77,14 @@ class Admin {
         this.getAdminSearchInput().should("have.value", input);
     }
 
+    // confirm admin role value
     validateAdminUserRoleValue(role_name) {
         this.getSelectTextInput().first().should('contain', role_name);
+    }
+
+    // confirm employee name value
+    validateEmployeeNameValue(employee_name) {
+        this.getEmployeeNameSearchInput().should("have.value", employee_name);
     }
 
     validateAdminPage() {

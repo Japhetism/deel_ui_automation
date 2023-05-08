@@ -49,11 +49,19 @@ Then("I expected admin search field to have a value", () => {
 });
 
 When("I select admin as user role", () => {
-    adminPage.setAdminUserRole("ESS");
+    adminPage.setAdminUserRole("Admin");
 });
 
 Then("I expect admin user role field to have a value", () => {
-    adminPage.validateAdminUserRoleValue("ESS");
+    adminPage.validateAdminUserRoleValue("Admin");
+});
+
+When("I enter employee hint name to select an employee", () => {
+    adminPage.setEmployeeName("Ali", "Alice Duval");
+});
+
+Then("I expect employee name field to have a value", () => {
+    adminPage.validateEmployeeNameValue("Alice  Duval");
 });
 
 When("I click on search button", () => {
