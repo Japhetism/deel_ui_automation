@@ -40,18 +40,18 @@ Then("I should be redirected to the leave page", () => {
     leavePage.validateLeavePage();
 });
 
-When("I select from date", () => {
-    leavePage.setFromDate();
+When("I select from date as {string} from the date picker", (date) => {
+    leavePage.setFromDate(date);
 });
 
-Then("I should see the selected from date", () => {
-    leavePage.validateFromDate();
+Then("I should see {string} as the selected from date", (date) => {
+    leavePage.validateFromDate(date);
 });
 
-When("I select to date", () => {
-    leavePage.setToDate();
+When("I select to date as {string} from the date picker", (date) => {
+    leavePage.setToDate(date);
 });
 
-Then("I should see the selected to date", () => {
-    leavePage.validateToDate();
+Then("I should see {string} as the selected to date", (date) => {
+    leavePage.validateToDate(date);
 });

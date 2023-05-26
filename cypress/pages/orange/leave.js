@@ -42,12 +42,12 @@ class Leave {
             .get(".oxd-calendar-date").contains(d.getDate()).click();
     }
 
-    setFromDate() {
-        this.setDate(0, "1990-10-31");
+    setFromDate(date) {
+        this.setDate(0, date);
     }
 
-    setToDate() {
-        this.setDate(1, "2023-04-20");
+    setToDate(date) {
+        this.setDate(1, date);
     }
 
     clickOnLeaveMenu() {
@@ -58,12 +58,12 @@ class Leave {
         this.getDateInput(position).should('have.value', date);
     }
 
-    validateFromDate() {
-        this.validateDateInputValue(0, "1990-10-31");
+    validateFromDate(date) {
+        this.validateDateInputValue(0, date);
     }
 
-    validateToDate() {
-        this.validateDateInputValue(1, "2023-04-20");
+    validateToDate(date) {
+        this.validateDateInputValue(1, date);
     }
 
     validateLeavePage() {
