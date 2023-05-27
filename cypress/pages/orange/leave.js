@@ -37,7 +37,7 @@ class Leave {
 
     // locate span
     getTableRow() {
-        return cy.get(".oxd-table-row");
+        return cy.get(".oxd-table-body > .oxd-table-card > .oxd-table-row");
     }
 
     setDate(position, date) {
