@@ -56,7 +56,32 @@ When("I click on log in button on the login page", () => {
     loginPage.clickLogin();
 });
 
+Then("I should see a modal for otp", () => {
+    loginPage.validateOtpModalIsVisible();
+});
+
 Then("I should see an error message as {string}", (message) => {
     loginPage.validateInvalidLogin(message);
 });
 
+When("I click on login with Google button with email as {string} and password as {string}", (email, password) => {
+    cy.wait(10000);
+    loginPage.clickGoogleLogin();
+    loginPage.googleAuth(email, password);
+});
+
+When("I enter otp from browser prompt", () => {
+    loginPage.readOtpFromBrowserConsole();
+});
+
+Then("I should see complete login button enabled", () => {
+    loginPage.validateCompleteLoginButton();
+});
+
+When("I click on complete login button", () => {
+    loginPage.clickCompleteLogin();
+});
+
+Then("I should be redirected to my dashboard with greetings to include my name as {string} and url as {string}", (name, url) =>  {
+    loginPage.validateSuccessfulLogin(name, url);
+})
