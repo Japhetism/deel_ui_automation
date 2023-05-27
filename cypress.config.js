@@ -38,7 +38,7 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "https://opensource-demo.orangehrmlive.com",
+    baseUrl: "/",
     specPattern: "**/*.feature",
     responseTimeout: 5000,
     supportFile: false,

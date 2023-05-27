@@ -28,8 +28,7 @@ Cypress.on('uncaught:exception', (err) => {
 });
 
 Given("I am on the home page", () => {
-    cy.visit("https://deel.com");
-    //homePage.redirectToLoginPage();
+    cy.visit("/");
 });
 
 When("I click on log in button on the home page", () => {
