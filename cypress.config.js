@@ -38,7 +38,7 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "/",
+    baseUrl: "https://deel.com",
     specPattern: "**/*.feature",
     responseTimeout: 5000,
     supportFile: false,
