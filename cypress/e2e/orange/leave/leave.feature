@@ -10,4 +10,6 @@ Feature: Orange website Leave
         Then I should see "1990-01-03" as the selected from date
         When I select to date as "2023-05-20" from the date picker
         Then I should see "2023-05-20" as the selected to date
+        When I click on search button
+        Then I should see table records
         

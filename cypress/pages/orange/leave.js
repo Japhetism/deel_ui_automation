@@ -29,7 +29,17 @@ class Leave {
     getDateInput(position) {
         return cy.get("input[placeholder='yyyy-mm-dd']").eq(position);
     }
-    
+
+    // locate search button
+    getSearchBtn() {
+        return cy.get("button").contains("Search");
+    }
+
+    // locate span
+    getTableRow() {
+        return cy.get(".oxd-table-row");
+    }
+
     setDate(position, date) {
         const d = new Date(date);
         return this.getDateInput(position).click()
@@ -54,6 +64,10 @@ class Leave {
         this.getLeaveMenu().click();
     }
 
+    clickOnSearchBtn() {
+        this.getSearchBtn().click({force: true});
+    }
+
     validateDateInputValue(position, date) {
         this.getDateInput(position).should('have.value', date);
     }
@@ -70,6 +84,11 @@ class Leave {
         cy.url().should('include', 'orangehrmlive.com')  
             .should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList')
             .should('contain', 'orangehrmlive')
+    }
+
+    validateDateRangeSearchResult() {
+        cy.wait(1000);
+        this.getTableRow().its('length').should('be.gt', 0);
     }
 }
 

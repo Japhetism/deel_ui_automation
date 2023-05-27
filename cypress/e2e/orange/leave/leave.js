@@ -55,3 +55,11 @@ When("I select to date as {string} from the date picker", (date) => {
 Then("I should see {string} as the selected to date", (date) => {
     leavePage.validateToDate(date);
 });
+
+When("I click on search button", () => {
+    leavePage.clickOnSearchBtn();
+});
+
+Then("I should see table records", () => {
+    leavePage.validateDateRangeSearchResult();
+});
