@@ -65,6 +65,12 @@ class Login {
         this.getButton().contains("Log in using Google").click();
     }
 
+    // click on register button
+    clickRegisterButton() {
+        cy.wait(50000);
+        this.getButton().contains("Sign Up").click();
+    }
+
     // validate email address field
     validateEmailAddressValue(email) {
         this.getEmailInput().should("have.value", email);
