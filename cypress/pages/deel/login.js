@@ -52,6 +52,7 @@ class Login {
     // click on login button
     clickLogin() {
         this.getButton().contains("log in").click();
+        cy.wait(30000);
     }
 
     // click on complete login
@@ -84,6 +85,13 @@ class Login {
 
     validateOtpModalIsVisible() {
         this.getHeading2Element().contains("Verification required").should("exist");
+        cy.wait(10000);
+    }
+
+    validateOtpModalIsVisible2() {
+        this.getHeading2Element().contains("Verification required").then((el) => {
+            this.readOtpFromBrowserConsole();
+        })
     }
 
     validateCompleteLoginButton() {
@@ -92,10 +100,12 @@ class Login {
 
     validateSuccessfulLogin(name, url) {
         cy.url().should('eq', url);
+        cy.wait(50000);
         cy.get("h1").invoke("text").should('include', name);
     }
 
     readOtpFromBrowserConsole() {
+        cy.wait(20000);
         const otp = window.prompt("Enter otp");
         this.setOtp(otp);
     }
@@ -109,9 +119,14 @@ class Login {
     }
 
     userLogin(email, password) {
+        cy.wait(30000);
         this.setEmailValue(email);
         this.setPasswordValue(password);
         this.clickLogin();
+        cy.wait(10000);
+        this.validateOtpModalIsVisible2()
+        this.clickCompleteLogin();
+        cy.wait(20000);
     }
 }
 

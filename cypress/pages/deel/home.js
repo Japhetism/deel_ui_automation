@@ -10,6 +10,7 @@ class Home {
     // click on login text button
     clickLoginText() {
         this.getLoginText().click();
+        cy.wait(10000);
     }
 
     // redirect to login screeen
