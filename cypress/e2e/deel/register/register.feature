@@ -14,7 +14,7 @@ Feature: Deel Register
         Then I should be redirected to a page with url with url path as "create-profile?user-type=contractor"
         When I enter all the sign up details
         | firstName | lastName | email | password | howYouHearAboutUs |
-        | <your first name> | <your last name> | <your email address> | <your password> | <your option type> |
+        | James | Doe | jamesdoe2023@gmail.com | P@ssword2023 | Employee/Contractor |
         Then I should see Create Your Deel Account button enabled
         When I click on "Create Your Deel Account"
         Then I should be redirected to contractor type page with url path as "contractor-type"
